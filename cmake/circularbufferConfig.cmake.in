@@ -1,0 +1,10 @@
+get_filename_component(CIRCULARBUFFER_CMAKE_DIR "${CMAKE_CURRENT_LIST_FILE}" PATH)
+include(CMakeFindDependencyMacro)
+
+list(APPEND CMAKE_MODULE_PATH ${CIRCULARBUFFER_CMAKE_DIR})
+
+if(NOT TARGET circularbuffer)
+    include("${CIRCULARBUFFER_CMAKE_DIR}/circularbufferTargets.cmake")
+endif()
+
+set(CIRCULARBUFFER_lIBRARIES circularbuffer)

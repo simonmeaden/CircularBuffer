@@ -28,7 +28,7 @@
 #include <QList>
 #include <QVector>
 
-#include "private/circularbuffer.h"
+#include "sm_libraries/private/circularbuffer.h"
 #include "sm_widgets_global.h"
 #include <list>
 #include <stddef.h>
@@ -118,7 +118,7 @@ public:
     \param capacity - an int value specifying how many items may be stored in
      the buffer.
   */
-  CircularBuffer(int capacity)
+  explicit CircularBuffer(int capacity)
     : m_buffer(new circular_buffer<value_type>(capacity))
   {}
 
