@@ -53,24 +53,8 @@ target_sources(circularbuffer
       $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include/sm_libraries/CircularBuffer.h>
       $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include/sm_libraries/private/circularbuffer.h>
       $<INSTALL_INTERFACE:include/sm_libraries/CircularBuffer.h>
-#   PRIVATE
-#      include/sm_libraries/private/circularbuffer.h
-#      src/CircularBuffer.cpp
 )
 
-#target_include_directories(circularbuffer
-#   INTERACE
-#      $<INSTALL_INTERFACE:include>
-##      $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
-#)
-
-#target_link_libraries(circularbuffer
-#   INTERFACE
-#       Qt5::Core Qt5::Gui
-#)
-
-#get_property(includes TARGET circularbuffer PROPERTY "INTERFACE_INCLUDE_DIRECTORIES")
-#message("Includes " ${includes})
 ##############################################
 # Installation instructions
 include(GNUInstallDirs)
